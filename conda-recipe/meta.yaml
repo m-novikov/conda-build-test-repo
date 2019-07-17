@@ -1,7 +1,7 @@
 {% set package_name=package_name or "testpkg" %}
 package:
   name: {{ package_name }}
-  version: 0.1a
+  version: {{ GIT_DESCRIBE_TAG }}
 
 source:
   git_url: ../
