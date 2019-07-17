@@ -1,0 +1,5 @@
+python:
+  - 3.7
+package_name:
+  - testpkg
+  - testpkg-client

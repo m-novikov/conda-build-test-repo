@@ -1,0 +1,21 @@
+{% set package_name=package_name or "testpkg" %}
+package:
+  name: {{ package_name }}
+  version: 0.1a
+
+source:
+  git_url: ../
+
+build:
+  script: python -m pip install --no-deps --ignore-installed .
+
+requirements:
+  build:
+    - pip
+    - python {{ python }}
+  run:
+    - python {{ python }}*
+
+test:
+  imports:
+    - pkg
